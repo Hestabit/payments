@@ -1,0 +1,45 @@
+{
+    "name": "hestalabs/payments",
+    "description": ":description",
+    "authors": [
+        {
+            "name": "Hestalabs",
+            "email": "friends@hestabit.com",
+            "homepage": "https://github.com/hestalabs"
+        }
+    ],
+    "homepage": "https://github.com/hestalabs/payments",
+    "keywords": ["Laravel", "Payments", "PayPal", "Stripe", "Payment Gateway", "Multi Payment Gateways"],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "~5",
+        "cartalyst/stripe-laravel": ">=4.0.0",
+        "anouar/paypalpayment": ">=3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3.0",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hestalabs\\Payments\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Hestalabs\\Payments\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hestalabs\\Payments\\PaymentsServiceProvider"
+            ],
+            "aliases": {
+                "Payments": "Hestalabs\\Payments\\Facades\\Payments"
+            }
+        }
+    }
+}
