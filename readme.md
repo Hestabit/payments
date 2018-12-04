@@ -3,7 +3,6 @@
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
 [![Build Status][ico-travis]][link-travis]
-[![StyleCI][ico-styleci]][link-styleci]
 
 This is simple and easy to use Laravel and Lumen package for using multiple payment gateways in a single place. Now you don't need to install multiple packages for multiple payment gateways.
 Here we provide 2 of most widely used Payment Gateways (PayPal, Stripe) having easy to use methods such as `pay()`, `invoice()`, `refund()` etc.
@@ -310,6 +309,5 @@ license. Please see the [license file](license.md) for more information.
 [link-packagist]: https://packagist.org/packages/hestalabs/payments
 [link-downloads]: https://packagist.org/packages/hestalabs/payments
 [link-travis]: https://travis-ci.org/hestalabs/payments
-[link-styleci]: https://styleci.io/repos/12345678
 [link-author]: https://github.com/hestalabs
 [link-contributors]: ../../contributors]
