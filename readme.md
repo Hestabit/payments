@@ -33,7 +33,7 @@ Next, run `composer update`.
 
 i). For `Laravel` Add the ServiceProvider to your `config/app.php`
 
-	a). Add in `providers` array,
+a). Add in `providers` array,
 
 	'providers' => array(
 	    // ...
@@ -41,7 +41,7 @@ i). For `Laravel` Add the ServiceProvider to your `config/app.php`
 	    Hestalabs\Payments\PaymentsServiceProvider::class,
 	);
 
-	b). Add alias in `alias` array,
+b). Add alias in `alias` array,
 
 	'aliases' => array(
 	    // ...
@@ -49,12 +49,14 @@ i). For `Laravel` Add the ServiceProvider to your `config/app.php`
 	    'Payment'   => Hestalabs\Payments\Facades\Payment::class,
 	);
 
-	c). Finally publish the package configurations by running the following command in `Terminal`
+c). Finally publish the package configurations by running the following command in `Terminal`
 
 	`php artisan vendor:publish --provider="Hestalabs\Payments\PaymentsServiceProvider"`
 
 
-ii). a). For `Lumen` make a directory named `config` and make a file there named `payments` and add the below code,
+ii). 
+
+a). For `Lumen` make a directory named `config` and make a file there named `payments` and add the below code,
 
 	<?php
 
@@ -98,9 +100,10 @@ ii). a). For `Lumen` make a directory named `config` and make a file there named
 		],
 	];
 
-	b). Make a directory inside in `app` named `Support` and make a file there named `helpers.php`. Now add the following lines in your `composer.json`.
+b). Make a directory inside in `app` named `Support` and make a file there named `helpers.php`. Now add the following lines in your `composer.json`.
 
-	//composer.json
+//in composer.json
+
 	"autoload": {
         "classmap": [
             "database/seeds",
@@ -114,7 +117,8 @@ ii). a). For `Lumen` make a directory named `config` and make a file there named
         ]
     },
 
-	//in app/Support/helpers.php
+	
+//in app/Support/helpers.php
 
 	<?php
 
@@ -131,7 +135,7 @@ ii). a). For `Lumen` make a directory named `config` and make a file there named
 	}
 
 
-	c). Go to your `bootstrap/app.php` and uncomment line there `withEloquent()` and add the following lines,
+c). Go to your `bootstrap/app.php` and uncomment line there `withEloquent()` and add the following lines,
 
 	$app->register(Hestalabs\Payments\PaymentsServiceProvider::class);
 
@@ -161,7 +165,7 @@ PAYPAL_CLIENT_SECRET='YOUR_CREDENTIALS'
 
 1). For PayPal (if `PAYMENT_TYPE` == paypal in .env)
 	
-	a). For payment through PayPal
+i). For payment through PayPal
 
 	//for shipping details 						(Optional)
 	$shipping = \Payment::shipping();
@@ -190,7 +194,9 @@ PAYPAL_CLIENT_SECRET='YOUR_CREDENTIALS'
 	->setShippingTax(1.0)	(sub total must be a sumation of all taxes and price)	
 	->setSubtotal(2.0);
 
-	//a). making payment (paypal checkout)
+a). making payment (paypal checkout)
+	
+    
 	$pay = \Payment::setTax(0.2)									
 	->setPrice(1)	//required                          		
 	->setQuantity(1)	//required							
@@ -208,8 +214,10 @@ PAYPAL_CLIENT_SECRET='YOUR_CREDENTIALS'
 	->setIntent('sale')	(Optional)(Default : sale)(e.g. sale, order, authorize)					
 	->setDetails($details)						
 	->pay();	//required
+	```
 
-	//b). making payment through card, then set card
+b). making payment through card, then set card
+
 	$pay = \Payment::setTax(0.2)									
 	->setPrice(1)	//required                          		
 	->setQuantity(1)	//optional							
@@ -223,16 +231,16 @@ PAYPAL_CLIENT_SECRET='YOUR_CREDENTIALS'
 	->setIntent('sale')	(Optional)(Default : sale)(e.g. sale, order, authorize)					
 	->setDetails($details)						
 	->pay();	//required
+	
 
-
-	b). For the invoice or payment details of any Payment through PayPal
+b). For the invoice or payment details of any Payment through PayPal
 
 
 	$payment_id = 'PAY-1JK339012V705711ALPC3QSI';	: Required(fetch this id, when you are making transaction and store it safe)
 	$payment_details = \Payment::invoice($payment_id);
 	
 
-	c). For refund of any transaction through PayPal
+c). For refund of any transaction through PayPal
 	
 	$transaction_id = '3S7574554G079694D'; : Required(fetch this id, when you are making transaction and store)
 	$refund = \Payment::setAmount(0.11)
@@ -243,7 +251,7 @@ PAYPAL_CLIENT_SECRET='YOUR_CREDENTIALS'
 
 
 2). For Stripe (if `PAYMENT_TYPE` == stripe in .env)
-	a). For payment through Stripe
+a). For payment through Stripe
 	
 	//initialising the card object
 	$card = Payment::card();
@@ -259,14 +267,14 @@ PAYPAL_CLIENT_SECRET='YOUR_CREDENTIALS'
 	->pay();	: required
 	
 
-	b). To get invoice or payment details
+b). To get invoice or payment details
 
 	$payment_id = 'ch_1DK0jWB108n83JtHxlqSCqrK';	: Required(fetch this id, when you are making transaction and store it safe)
 	
 	$payment_details = \Payment::invoice($payment_id);
 	
 
-	c). To get refund of any transaction
+c). To get refund of any transaction
 	
 	$transaction_id = 'ch_1DK0j1B108n83JtH236d8aH5'; : Required(fetch this id, when you are making transaction and store)
 	$refund = \Payment::setAmount(1)
