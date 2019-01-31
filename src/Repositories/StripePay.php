@@ -74,7 +74,8 @@ class StripePay extends Setter implements Payment{
 						'number' 	=> $this->getCard()->number,
 						'exp_month' => $this->getCard()->expire_month,
 						'exp_year' 	=> $this->getCard()->expire_year,
-						'cvc' 		=> $this->getCard()->cvv2
+						'cvc' 		=> $this->getCard()->cvv2,
+						'name'		=> $this->getCard()->name,
 					],
 				]);
 				

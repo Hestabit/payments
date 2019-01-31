@@ -32,6 +32,17 @@ class Card{
 	}
 
 	/**
+	 * setter for name
+	 * @param string
+	 * @return object
+	 */
+	public function setName($name){
+		$this->name = $name;
+
+		return $this;
+	}
+
+	/**
 	 * setter for cvv
 	 * @param integer
 	 * @return object
@@ -102,6 +113,14 @@ class Card{
 	 */
 	public function getLastname(){
 		return $this->last_name;
+	}
+
+	/**
+	 * getter for name
+	 * @return string
+	 */
+	public function getName(){
+		return $this->name;
 	}
 	
 	/**
