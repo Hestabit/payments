@@ -30,6 +30,17 @@ class Card{
 
 		return $this;
 	}
+	
+	/**
+	 * setter for name
+	 * @param string
+	 * @return object
+	 */
+	public function setName($name){
+		$this->name = $name;
+
+		return $this;
+	}
 
 	/**
 	 * setter for name
@@ -115,6 +126,14 @@ class Card{
 		return $this->last_name;
 	}
 
+	/**
+	 * getter for name
+	 * @return string
+	 */
+	public function getName(){
+		return $this->name;
+	}
+	
 	/**
 	 * getter for name
 	 * @return string
