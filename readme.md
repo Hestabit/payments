@@ -1,8 +1,9 @@
 # Payments
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Total Downloads][ico-downloads]][link-downloads]
-[![Build Status][ico-travis]][link-travis]
+[![Latest Stable Version](https://poser.pugx.org/hestalabs/payments/v/stable)](https://packagist.org/packages/hestalabs/payments)
+[![Total Downloads](https://poser.pugx.org/hestalabs/payments/downloads)](https://packagist.org/packages/hestalabs/payments)
+[![License](https://poser.pugx.org/hestalabs/payments/license)](https://packagist.org/packages/hestalabs/payments)
+[![Monthly Downloads](https://poser.pugx.org/hestalabs/payments/d/monthly)](https://packagist.org/packages/hestalabs/payments)
 
 This is simple and easy to use Laravel and Lumen package for using multiple payment gateways in a single place. Now you don't need to install multiple packages for multiple payment gateways.
 Here we provide 2 of most widely used Payment Gateways (PayPal, Stripe) having easy to use methods such as `pay()`, `invoice()`, `refund()` etc.
@@ -15,21 +16,21 @@ Via Composer
 for both `Laravel` and `Lumen`
 
 ``` bash
-$ composer require Hetsabit/payments ">=1.0"
+$ composer require hetsabit/payments ">=1.0"
 ```
 
 or you can just add it in your composer.json
 
 ```
 "require": {
-    "Hetsabit/payments": ">=1.0"
+    "hetsabit/payments": ">=1.0"
 }
 ```
 
 Next, run `composer update`.
 
 
-## Usage
+## Usage for Laravel
 
 i). For `Laravel` Add the ServiceProvider to your `config/app.php`
 
@@ -54,7 +55,7 @@ c). Finally publish the package configurations by running the following command 
 	`php artisan vendor:publish --provider="Hetsabit\Payments\PaymentsServiceProvider"`
 
 
-ii). 
+## Usage for Lumen
 
 a). For `Lumen` make a directory named `config` and make a file there named `payments` and add the below code,
 
