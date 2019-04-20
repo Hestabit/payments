@@ -1,23 +1,23 @@
 <?php
 
-namespace Hestalabs\Payments\Repositories;
+namespace Hetsabit\Payments\Repositories;
 
 use Validator;
 use Cartalyst\Stripe\Stripe;
-use Hestalabs\Payments\Payment;
-use Hestalabs\Payments\Handlers\Setter;
+use Hetsabit\Payments\Payment;
+use Hetsabit\Payments\Handlers\Setter;
 
 /*
 |--------------------------------------------------------------------------
 | Handling all the payment behaviours via Stripe.
 |--------------------------------------------------------------------------|
-| Written By- Hestalabs
+| Written By- Hetsabit
 */
 class StripePay extends Setter implements Payment{
 	/*
 	|--------------------------------------------------------------------------
 	| Payment via Stripe with a given credit card
-	| Written By- Hestalabs
+	| Written By- Hetsabit
 	|--------------------------------------------------------------------------
 	| @var number 			: integer (Required)
 	| @var expiry_year 		: integer (Required)
@@ -116,7 +116,7 @@ class StripePay extends Setter implements Payment{
 	/*
 	|--------------------------------------------------------------------------
 	| Getting the details of any given transaction
-	| Written By- Hestalabs
+	| Written By- Hetsabit
 	|--------------------------------------------------------------------------
 	| @var transaction_id	: integer (Required)
 	|--------------------------------------------------------------------------
@@ -142,7 +142,7 @@ class StripePay extends Setter implements Payment{
 	/*
 	|--------------------------------------------------------------------------
 	| To refund the paid amount
-	| Written By- Hestalabs
+	| Written By- Hetsabit
 	|--------------------------------------------------------------------------
 	| @var reason 			: string  (Optional) (e.g. duplicate, fraudulent, requested_by_customer) (default : requested_by_customer)
 	| @var amount 			: numeric (Required)

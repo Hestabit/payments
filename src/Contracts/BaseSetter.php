@@ -1,6 +1,6 @@
 <?php
 
-namespace Hestalabs\Payments\Contracts;
+namespace Hetsabit\Payments\Contracts;
 
 /**
  * Base setter contract for all the implemented payment gateways

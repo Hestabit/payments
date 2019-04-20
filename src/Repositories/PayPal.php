@@ -1,6 +1,6 @@
 <?php
 
-namespace Hestalabs\Payments\Repositories;
+namespace Hetsabit\Payments\Repositories;
 
 use Validator;	
 use PayPal\Api\Sale;
@@ -15,15 +15,15 @@ use PayPal\Api\Transaction;
 use PayPal\Rest\ApiContext;
 use PayPal\Api\RedirectUrls;
 use Illuminate\Http\Request;
-use Hestalabs\Payments\Handlers\Setter;
+use Hetsabit\Payments\Handlers\Setter;
 use Anouar\Paypalpayment\PaypalPayment;
-use Hestalabs\Payments\Payment as PPPayment;
+use Hetsabit\Payments\Payment as PPPayment;
 
 /*
 |--------------------------------------------------
 | Handling all the payment behaviours via PayPal.
 |--------------------------------------------------
-| Written By- Hestalabs
+| Written By- Hetsabit
 */
 class PayPal extends Setter implements PPPayment{
 	/**
@@ -58,7 +58,7 @@ class PayPal extends Setter implements PPPayment{
 	/*
 	|------------------------------------------------------
 	| For paying via paypal(PayPal Express)
-	| Written By- Hestalabs
+	| Written By- Hetsabit
 	|------------------------------------------------------
 	| @var line1 			: apha_numeric
 	| @var line2 			: apha_numeric
@@ -284,7 +284,7 @@ class PayPal extends Setter implements PPPayment{
 	/*
 	|------------------------------------------------------
 	| For paying via credit_card
-	| Written By- Hestalabs
+	| Written By- Hetsabit
 	|------------------------------------------------------
 	| @var line1 			: apha_numeric
 	| @var line2 			: apha_numeric
@@ -478,7 +478,7 @@ class PayPal extends Setter implements PPPayment{
 	/*
 	|--------------------------------------------------------------------------
 	| Getting the details of given transaction
-	| Written By- Hestalabs
+	| Written By- Hetsabit
 	|--------------------------------------------------------------------------
 	| @var payment_id 	: integer
 	|--------------------------------------------------------------------------
@@ -500,7 +500,7 @@ class PayPal extends Setter implements PPPayment{
     /*
 	|--------------------------------------------------------
 	| To refund the paid amount
-	| Written By- Hestalabs
+	| Written By- Hetsabit
 	|--------------------------------------------------------
 	| @var reason 			: string 
 	| @var amount 			: numeric

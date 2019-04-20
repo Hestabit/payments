@@ -15,14 +15,14 @@ Via Composer
 for both `Laravel` and `Lumen`
 
 ``` bash
-$ composer require hestalabs/payments ">=1.0"
+$ composer require Hetsabit/payments ">=1.0"
 ```
 
 or you can just add it in your composer.json
 
 ```
 "require": {
-    "hestalabs/payments": ">=1.0"
+    "Hetsabit/payments": ">=1.0"
 }
 ```
 
@@ -38,7 +38,7 @@ a). Add in `providers` array,
 	'providers' => array(
 	    // ...
 
-	    Hestalabs\Payments\PaymentsServiceProvider::class,
+	    Hetsabit\Payments\PaymentsServiceProvider::class,
 	);
 
 b). Add alias in `alias` array,
@@ -46,12 +46,12 @@ b). Add alias in `alias` array,
 	'aliases' => array(
 	    // ...
 
-	    'Payment'   => Hestalabs\Payments\Facades\Payment::class,
+	    'Payment'   => Hetsabit\Payments\Facades\Payment::class,
 	);
 
 c). Finally publish the package configurations by running the following command in `Terminal`
 
-	`php artisan vendor:publish --provider="Hestalabs\Payments\PaymentsServiceProvider"`
+	`php artisan vendor:publish --provider="Hetsabit\Payments\PaymentsServiceProvider"`
 
 
 ii). 
@@ -137,9 +137,9 @@ b). Make a directory inside in `app` named `Support` and make a file there named
 
 c). Go to your `bootstrap/app.php` and uncomment line there `withEloquent()` and add the following lines,
 
-	$app->register(Hestalabs\Payments\PaymentsServiceProvider::class);
+	$app->register(Hetsabit\Payments\PaymentsServiceProvider::class);
 
-	class_alias('Hestalabs\Payments\Facades\Payment', 'Payment');
+	class_alias('Hetsabit\Payments\Facades\Payment', 'Payment');
 
 	$app->configure('payments');
 
@@ -286,7 +286,7 @@ c). To get refund of any transaction
 ## Testing
 
 ``` bash
-$ vendor hestalabs/payments
+$ vendor Hetsabit/payments
 ```
 
 ## Environment
@@ -309,13 +309,13 @@ If you discover any security related issues, please email friends@hestabit.com i
 
 license. Please see the [license file](license.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/hestalabs/payments.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/hestalabs/payments.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/hestalabs/payments/master.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/Hetsabit/payments.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/Hetsabit/payments.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/Hetsabit/payments/master.svg?style=flat-square
 [ico-styleci]: https://styleci.io/repos/12345678/shield
 
-[link-packagist]: https://packagist.org/packages/hestalabs/payments
-[link-downloads]: https://packagist.org/packages/hestalabs/payments
-[link-travis]: https://travis-ci.org/hestalabs/payments
-[link-author]: https://github.com/hestalabs
+[link-packagist]: https://packagist.org/packages/Hetsabit/payments
+[link-downloads]: https://packagist.org/packages/Hetsabit/payments
+[link-travis]: https://travis-ci.org/Hetsabit/payments
+[link-author]: https://github.com/Hetsabit
 [link-contributors]: ../../contributors]

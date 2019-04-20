@@ -1,11 +1,11 @@
 <?php
 
-namespace Hestalabs\Payments\Lib;
+namespace Hetsabit\Payments\Lib;
 
 /*
 |--------------------------------------------------------------------------
 | This class is used to set and get various details related to payment
-| Created By- Hestalabs
+| Created By- Hetsabit
 |--------------------------------------------------------------------------
 */
 class Details{

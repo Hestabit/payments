@@ -1,13 +1,13 @@
 <?php
 
-namespace Hestalabs\Payments;
+namespace Hetsabit\Payments;
 
 use Illuminate\Http\Request;
 
 /**
  |-------------------------------------
  |	Contract for all the implemented payment gateways
- | 	Written by : Hestalabs
+ | 	Written by : Hetsabit
  |-------------------------------------
  */
 interface Payment{

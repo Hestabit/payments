@@ -1,6 +1,6 @@
 <?php
 
-namespace Hestalabs\Payments\Facades;
+namespace Hetsabit\Payments\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

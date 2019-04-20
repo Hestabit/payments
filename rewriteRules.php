@@ -1,6 +1,6 @@
 <?php
 
-// Available placeholders: Hestalabs, Payments, hestalabs, payments
+// Available placeholders: Hetsabit, Payments, Hetsabit, payments
 return [
     'src/MyPackage.php' => 'src/Payments.php',
     'config/mypackage.php' => 'config/payments.php',

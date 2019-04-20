@@ -1,16 +1,16 @@
 <?php 
 
-namespace Hestalabs\Payments\Handlers;
+namespace Hetsabit\Payments\Handlers;
 
-use Hestalabs\Payments\Lib\Card;
-use Hestalabs\Payments\Lib\Details;
-use Hestalabs\Payments\Lib\Shipping;
-use Hestalabs\Payments\Contracts\BaseSetter;
+use Hetsabit\Payments\Lib\Card;
+use Hetsabit\Payments\Lib\Details;
+use Hetsabit\Payments\Lib\Shipping;
+use Hetsabit\Payments\Contracts\BaseSetter;
 
 /*
 |--------------------------------------------------------------------------
 | This class is used to set and get various data related to payment
-| Created By- Hestalabs
+| Created By- Hetsabit
 |--------------------------------------------------------------------------
 */
 class Setter implements BaseSetter{
@@ -41,21 +41,21 @@ class Setter implements BaseSetter{
 
 
 	/**
-     * @return Hestalabs\Payments\Lib\Shipping
+     * @return Hetsabit\Payments\Lib\Shipping
      */
 	public function shipping(){
 	 	return new Shipping;
 	}
 
 	/**
-     * @return Hestalabs\Payments\Lib\Card
+     * @return Hetsabit\Payments\Lib\Card
      */
 	public function card(){
 	 	return new Card;
 	}
 
 	/**
-     * @return Hestalabs\Payments\Lib\Details
+     * @return Hetsabit\Payments\Lib\Details
      */
 	public function details(){
 	 	return new Details;

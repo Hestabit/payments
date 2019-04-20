@@ -1,16 +1,16 @@
 <?php
 
-namespace Hestalabs\Payments;
+namespace Hetsabit\Payments;
 
 use Illuminate\Support\ServiceProvider;
-use Hestalabs\Payments\Repositories\PayPal;
-use Hestalabs\Payments\Repositories\StripePay;
+use Hetsabit\Payments\Repositories\PayPal;
+use Hetsabit\Payments\Repositories\StripePay;
 
 /*
 |--------------------------------------------------
 | Service provider for handling the control of Payment gateways
 |--------------------------------------------------
-| Written By- Hestalabs
+| Written By- Hetsabit
 */
 class PaymentsServiceProvider extends ServiceProvider{
     /**
@@ -19,8 +19,8 @@ class PaymentsServiceProvider extends ServiceProvider{
      * @return void
      */
     public function boot(){
-        // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'hestalabs');
-        // $this->loadViewsFrom(__DIR__.'/../resources/views', 'hestalabs');
+        // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'Hetsabit');
+        // $this->loadViewsFrom(__DIR__.'/../resources/views', 'Hetsabit');
         // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         // $this->loadRoutesFrom(__DIR__.'/routes.php');
 
@@ -80,17 +80,17 @@ class PaymentsServiceProvider extends ServiceProvider{
 
         // Publishing the views.
         /*$this->publishes([
-            __DIR__.'/../resources/views' => base_path('resources/views/vendor/hestalabs'),
+            __DIR__.'/../resources/views' => base_path('resources/views/vendor/Hetsabit'),
         ], 'payments.views');*/
 
         // Publishing assets.
         /*$this->publishes([
-            __DIR__.'/../resources/assets' => public_path('vendor/hestalabs'),
+            __DIR__.'/../resources/assets' => public_path('vendor/Hetsabit'),
         ], 'payments.views');*/
 
         // Publishing the translation files.
         /*$this->publishes([
-            __DIR__.'/../resources/lang' => resource_path('lang/vendor/hestalabs'),
+            __DIR__.'/../resources/lang' => resource_path('lang/vendor/Hetsabit'),
         ], 'payments.views');*/
 
         // Registering package commands.

@@ -1,14 +1,20 @@
 {
-    "name": "hestalabs/payments",
-    "description": ":description",
+    "name": "hestabit/payments",
+    "description": "This is simple and easy to use Laravel and Lumen package for using multiple payment gateways in a single place. Now you don't need to install multiple packages for multiple payment gateways. Here we provide 2 of most widely used Payment Gateways (PayPal, Stripe) having easy to use methods such as pay(), invoice(), refund() etc.",
     "authors": [
         {
-            "name": "Hestalabs",
-            "email": "friends@hestabit.com",
-            "homepage": "https://github.com/hestalabs"
+            "name": "Hestabit",
+            "email": "support@hestabit.com",
+            "homepage": "https://github.com/Hestabit"
+        },
+        {
+            "name": "Aman Kumar",
+            "email": "aman.kumar@hestabit.in",
+            "homepage": "https://github.com/amanhestabit",
+            "role": "Developer"
         }
     ],
-    "homepage": "https://github.com/hestalabs/payments",
+    "homepage": "https://github.com/Hestabit/payments",
     "keywords": ["Laravel", "Payments", "PayPal", "Stripe", "Payment Gateway", "Multi Payment Gateways"],
     "require": {
         "php": ">=5.3.0",
@@ -24,21 +30,21 @@
     },
     "autoload": {
         "psr-4": {
-            "Hestalabs\\Payments\\": "src/"
+            "Hestabit\\Payments\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Hestalabs\\Payments\\Tests\\": "tests"
+            "Hestabit\\Payments\\Tests\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Hestalabs\\Payments\\PaymentsServiceProvider"
+                "Hestabit\\Payments\\PaymentsServiceProvider"
             ],
             "aliases": {
-                "Payments": "Hestalabs\\Payments\\Facades\\Payments"
+                "Payments": "Hestabit\\Payments\\Facades\\Payments"
             }
         }
     }
